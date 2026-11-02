@@ -37,8 +37,8 @@ $(warning Detected assembler with broken .inst; disassembly will be unreliable)
 endif
 
 KBUILD_CFLAGS	+= -mgeneral-regs-only	\
-KBUILD_CFLAGS	+= $(call cc-option,-mtune=cortex-a720)
 		   $(compat_vdso) $(cc_has_k_constraint)
+KBUILD_CFLAGS	+= $(call cc-option,-mtune=cortex-a720)
 KBUILD_CFLAGS	+= $(call cc-disable-warning, psabi)
 KBUILD_AFLAGS	+= $(compat_vdso)
 
